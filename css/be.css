@@ -11672,10 +11672,31 @@ p {
 .sub-btn[data-theme] {
   display: none;
 }
+
 #stylesBtn {
   width: 50px;  /* Adatta a seconda delle dimensioni dell'immagine */
   height: 50px; /* Adatta a seconda delle dimensioni dell'immagine */
   background-image: url('../assets/img/brush.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+.sub-btn[data-theme="theme1"] {
+  background-image: url('../assets/img/vitruvian-man.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sub-btn[data-theme="theme2"] {
+  background-image: url('../assets/img/buttonbe.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -11687,14 +11708,18 @@ p {
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.sub-btn[data-theme="theme1"] {
-  background-image: url('../assets/img/vitruvian-man.png');
+.sub-btn[data-theme="theme4"] {
+  background-image: url('../assets/img/buttonpm.png');
+  background-size:contain;
+  background-position:left;
+  background-repeat: no-repeat;
+}
+.sub-btn[data-theme="theme5"] {
+  background-image: url('../assets/img/late90.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .sub-btn[data-theme="theme6"] {
   background-image: url('../assets/img/brain.png');
   background-size: cover;
@@ -11702,12 +11727,8 @@ p {
   background-repeat: no-repeat;
 }
 
-.sub-btn[data-theme="theme5"] {
-  background-image: url('../assets/img/late90.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
+
 
 .sub-btn {
   position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
@@ -11855,3 +11876,6 @@ cursor: pointer;
 background-color: yellow !important;
 font-weight: bold !important;
 }
+
+
+/* stile pulsanti */
