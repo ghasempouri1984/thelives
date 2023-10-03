@@ -10966,7 +10966,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  rgba(255, 255, 255, 0.7); /* Dark text color */
+  color:rgba(255, 255, 255, 0.7); /* Dark text color */
   font-weight: 500; /* Medium weight for a cleaner look */
   transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
