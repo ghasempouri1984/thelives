@@ -4555,7 +4555,7 @@ textarea.form-control-lg {
 .breadcrumb-item.active {
   color: var(--bs-breadcrumb-item-active-color);
 }
-
+/*
 .pagination {
   --bs-pagination-padding-x: 0.75rem;
   --bs-pagination-padding-y: 0.375rem;
@@ -4580,8 +4580,49 @@ textarea.form-control-lg {
   display: flex;
   padding-left: 0;
   list-style: none;
+}*/
+.pagination {
+  /* Basic Layout */
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+
+  /* Padding and Font */
+  --bs-pagination-padding-x: 0.75rem;
+  --bs-pagination-padding-y: 0.375rem;
+  --bs-pagination-font-size: 1rem;
+
+  /* Main Colors */
+  --bs-pagination-color: var(--bs-link-color);
+  --bs-pagination-bg: linear-gradient(to right, #fff, #f3f4f6);  /* Adding gradient */
+
+  /* Border Styles */
+  --bs-pagination-border-width: 1px;
+  --bs-pagination-border-color: #d1d5db;  /* Softer color */
+  --bs-pagination-border-radius: 0.5rem;  /* Rounded Corners */
+
+  /* Hover States */
+  --bs-pagination-hover-color: var(--bs-link-hover-color);
+  --bs-pagination-hover-bg: #d1d5db;  /* Softer color */
+  --bs-pagination-hover-border-color: #cbd5e1;  /* Softer color */
+
+  /* Focus States */
+  --bs-pagination-focus-color: var(--bs-link-hover-color);
+  --bs-pagination-focus-bg: #d1d5db;  /* Softer color */
+  --bs-pagination-focus-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);  /* Subtle Shadow */
+
+  /* Active States */
+  --bs-pagination-active-color: #fff;
+  --bs-pagination-active-bg: #6ee7b7;  /* Futuristic color */
+  --bs-pagination-active-border-color: #34d399;  /* Futuristic color */
+
+  /* Disabled States */
+  --bs-pagination-disabled-color: #6c757d;
+  --bs-pagination-disabled-bg: #f3f4f6;  /* Softer color */
+  --bs-pagination-disabled-border-color: #d1d5db;  /* Softer color */
 }
 
+/*
 .page-link {
   position: relative;
   display: block;
@@ -4592,7 +4633,22 @@ textarea.form-control-lg {
   background-color: var(--bs-pagination-bg);
   border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}*/
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+  font-size: var(--bs-pagination-font-size);
+  color: var(--bs-pagination-color);
+  text-decoration: none;
+  background-color: var(--bs-pagination-bg);
+  border-radius: 0.5rem;  /* Added for rounded corners */
+  border: var(--bs-pagination-border-width) solid var(--bs-pagination-border-color);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
+/*
 @media (prefers-reduced-motion: reduce) {
   .page-link {
     transition: none;
@@ -4634,7 +4690,58 @@ textarea.form-control-lg {
 .page-item:last-child .page-link {
   border-top-right-radius: var(--bs-pagination-border-radius);
   border-bottom-right-radius: var(--bs-pagination-border-radius);
+}*/
+
+@media (prefers-reduced-motion: reduce) {
+  .page-link {
+    transition: none;
+  }
 }
+
+.page-link:hover {
+  z-index: 2;
+  color: var(--bs-pagination-hover-color);
+  background-color: var(--bs-pagination-hover-bg);
+  border-color: var(--bs-pagination-hover-border-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Added shadow */
+}
+
+.page-link:focus {
+  z-index: 3;
+  color: var(--bs-pagination-focus-color);
+  background-color: var(--bs-pagination-focus-bg);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);  /* Modified shadow */
+}
+
+.page-link.active, .active > .page-link {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: var(--bs-pagination-active-bg);
+  border-color: var(--bs-pagination-active-border-color);
+}
+
+.page-link.disabled, .disabled > .page-link {
+  color: var(--bs-pagination-disabled-color);
+  pointer-events: none;
+  background-color: var(--bs-pagination-disabled-bg);
+  border-color: var(--bs-pagination-disabled-border-color);
+}
+
+.page-item:not(:first-child) .page-link {
+  margin-left: -1px;
+}
+
+.page-item:first-child .page-link {
+  border-top-left-radius: 0.5rem;  /* Modified for rounded corners */
+  border-bottom-left-radius: 0.5rem;  /* Modified for rounded corners */
+}
+
+.page-item:last-child .page-link {
+  border-top-right-radius: 0.5rem;  /* Modified for rounded corners */
+  border-bottom-right-radius: 0.5rem;  /* Modified for rounded corners */
+}
+
 
 .pagination-lg {
   --bs-pagination-padding-x: 1.5rem;

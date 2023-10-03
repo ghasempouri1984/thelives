@@ -77,6 +77,8 @@
   --bs-link-hover-color: #b88645;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+  --bs-body-text-align: unset;
+  --bs-nav-link-font-size: 1rem;
 }
 
 *,
@@ -2394,6 +2396,7 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+
 .form-range::-moz-range-thumb:active {
   background-color: #f8e5cc;
 }
