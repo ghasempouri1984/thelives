@@ -118,10 +118,6 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
  overflow-x: hidden;
- background-image: url("/assets/img/pm/pmbg.svg");
- background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
 
 }
 
@@ -10851,7 +10847,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../assets/img/bg.jpg");
+  background-image: url("/assets/img/pm/pmbg.svg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -10870,17 +10866,26 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .site-heading .site-heading-upper {
   display: block;
-  font-size: 2rem;
-  font-weight: 800;
+  font-family: "Silkscreen-Regular";
+  font-size: 3rem;
+  font-weight: 900;
+  color: #02B1BA !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 .site-heading .site-heading-lower {
-  font-size: 5rem;
-  font-weight: 100;
+  font-size: 8rem;
+  font-weight: 600;
   line-height: 4rem;
+  font-family: "Silkscreen-Bold";
+  display: block;
+  color: #0047AB ;
+  margin-bottom: -2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .page-section {
@@ -10904,7 +10909,7 @@ p {
 
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.5);
-
+  font-family: "SF mono", monospace ;
 }
 
 .btn-xl {
@@ -11097,14 +11102,11 @@ p {
 .product-item-description p {
   width: 100%;
   column-count: 3;
+  column-width: 5rem;
   column-gap: 10px;
   font-size:0.7rem!important;
 }
-.product-item-description .fut{
-  letter-spacing: 10px;
-  font-weight: bolder;
-  color:#00FFFF;
- }
+
  
  .product-item-description .bg-faded p:nth-of-type(1) , 
  .product-item-description .bg-faded p:nth-of-type(15) ,
@@ -11136,27 +11138,31 @@ p {
  
  .product-item-description .bg-faded p:nth-of-type(1) .fut, 
  .product-item-description .bg-faded p:nth-of-type(4) .fut, 
- .product-item-description .bg-faded p:nth-of-type(8) .fut, 
+ .product-item-description .bg-faded p:nth-of-type(8) .fut{
+  letter-spacing: -0.45rem;
+  font-size: 2rem;
+  color: #FF0033 ;
+ } 
  .product-item-description .bg-faded p:nth-of-type(11) .fut, 
  .product-item-description .bg-faded p:nth-of-type(18) .fut,
  .product-item-description .bg-faded p:nth-of-type(3) .fut,
- .product-item-description .bg-faded p:nth-of-type(14) .fut  {
-   letter-spacing: 10px;
+ .product-item-description .bg-faded p:nth-of-type(12) .fut {
+   letter-spacing: 8px;
    font-weight: bolder;
    color:#00FFFF;
  }
  
  .product-item-description .bg-faded p:nth-of-type(2) .fut, 
  .product-item-description .bg-faded p:nth-of-type(5) .fut,
- .product-item-description .bg-faded p:nth-of-type(6) .fut 
- .product-item-description .bg-faded p:nth-of-type(9) .fut, 
- .product-item-description .bg-faded p:nth-of-type(12) .fut, 
- .product-item-description .bg-faded p:nth-of-type(15) .fut,
- .product-item-description .bg-faded p:nth-of-type(16) .fut {
+ .product-item-description .bg-faded p:nth-of-type(6) .fut,
+ .product-item-description .bg-faded p:nth-of-type(9) .fut
+{
    letter-spacing: 5px;
    color:#0047AB;
-   font-size:2rem;
+   font-size:1.5rem;
  }
+
+
  
 .bg-faded .aquilineta {
   text-align: right;
