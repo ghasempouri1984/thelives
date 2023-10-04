@@ -182,17 +182,6 @@ document.getElementById('toTopBtn').addEventListener('click', function() {
 // Initialize theme buttons
 initializeThemeButtons();
 
-//popup script
-function popupfunction() {
-    var popup = document.getElementById("myPopup");
-    if (popup.style.display === "none" || popup.style.display === "") {
-        popup.style.display = "block";
-    } else {
-        popup.style.display = "none";
-    }
-}
-//ends popup script
-
 
 // effetto click futurismo 
 
