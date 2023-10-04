@@ -11259,37 +11259,42 @@ p {
 
 @media (max-width: 576px) {
   .verrocchio  {
-    width:25rem;
-    height: 25rem;
-    margin-top:1rem;
-    margin-left:2rem;
-    
+    width: 18rem;
+    height: 20rem;
+    margin-left: 16vw;
+    margin-top:2rem;
+    margin-bottom: 1rem;
   } 
   }
 
   @media (min-width: 577px) and (max-width: 700px) {
     .verrocchio  {
-      width:35rem;
-      height: 35rem;
-      margin-left:4rem;
+      width: 22rem;
+      height: 25rem;
+      margin-bottom: 1rem;
+      margin-left:3rem;
+      margin-top:2rem;
     }
   
    }
   
     @media (min-width: 701px) and (max-width: 992px) {
       .verrocchio  {
-        width:50rem;
-        height: 25rem;
-        margin-top: 3rem;
+        width: 22rem;
+            height: 25rem;
+            margin-left:6rem;
+            margin-bottom: 1rem;
+            margin-top: 3rem;
       }
     
     }
     @media (min-width: 992px) {
       .verrocchio  {
-       width:50rem;
-       height: 25rem;
-       margin-left:8rem;
-       margin-top: 3rem;
+        width: 25rem;
+              height: 25rem;
+              margin-left: 15rem;
+              margin-top: 3rem;
+              margin-bottom: 1rem;
      }
    }
 .leonardo {
@@ -11309,9 +11314,11 @@ p {
 
   @media (min-width: 577px) and (max-width: 700px) {
     .leonardo {
-      width:35rem;
-    height: 20rem;
-      margin-right: 20rem;
+      width: 22rem;
+      height: 25rem;
+      margin-bottom: 1rem;
+      margin-left:3rem;
+      margin-top:2rem;
     }
    }
   
@@ -11333,7 +11340,6 @@ p {
         
     }
    }
-
 
    .donatello {
     background-image: url('../assets/img/donatellodefault.svg');
@@ -11371,12 +11377,13 @@ p {
         
         }
         @media (min-width: 992px) {
-          .donatello {
-            width: 30rem;
-            height: 30rem;
-            margin-left: 10rem;
-            margin-top: 3rem;
-            margin-bottom: 1rem;
+            .donatello {
+              width: 25rem;
+              height: 25rem;
+              margin-left: 15rem;
+              margin-top: 3rem;
+              margin-bottom: 1rem;
+          
         }
        }
 .decorative-img{
@@ -11520,7 +11527,7 @@ p {
 /* Media queries */
 @media (max-width: 576px) {
   .david {
-    width: 20rem;
+    width: 18rem;
     height: 25rem;
     margin-left:4rem;
   }
