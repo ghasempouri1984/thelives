@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: 'SquareFont';
-  src: url('/assets/fonts/Square.ttf') format('truetype');
+  src: url('./assets/fonts/Square.ttf') format('truetype');
 }
 
 body {
@@ -107,6 +107,7 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
 
 hr {
@@ -3718,11 +3719,6 @@ textarea.form-control-lg {
   }
 }
 
-body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion, .accordion-body, .accordion-button {
-  cursor: url('../assets/img/wrench.svg') 0 0, auto;
-  
-  /* Le coordinate 0 0 indicano la posizione "punta" del cursore. Puoi regolarle se necessario. */
-}
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
@@ -4329,8 +4325,8 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
 }
 
 .accordion {
-  --bs-accordion-color: transparent;
-  --bs-accordion-bg: #000;
+  --bs-accordion-color: black;
+  --bs-accordion-bg: black;
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: #673d86;
   --bs-accordion-border-width: 1px;
@@ -4345,14 +4341,14 @@ body, .navbar:hover, .navbar a:hover, .navbar li.nav-item span:hover, .accordion
   --bs-accordion-btn-icon-transform: rotate(-180deg);
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23cf964d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-  --bs-accordion-btn-focus-border-color: #f3d3ab;
-  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #5a7db3;;
+  --bs-accordion-btn-focus-border-color: #673d86;
+  --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem #85c06c;
   --bs-accordion-body-padding-x: 1.25rem;
   --bs-accordion-body-padding-y: 1rem;
   --bs-accordion-btn-hover-bg:  linear-gradient(45deg, #f27a0a, #f27a0a 25%, #85c06c 25%, #85c06c 50%, #da3035 50%, #da3035 75%, #673d86 75%);
   --bs-accordion-active-color: #5a7db3;
   --bs-accordion-active-bg: #85c06c;
-  flex:1;
+   flex:1;
 }
 
 input[type="checkbox"] {
@@ -4364,23 +4360,28 @@ label {
   color: #f7e6ba;
   font-family: "SquareFont";
 }
+
+
+@media (min-width: 480px) and (max-width: 768px) { 
+  label{
+color:black;
+  }
+}
 .accordion-button {
   position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1.5rem 2rem;
+  padding:  var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
   color: #fff; 
   text-align: left;
   background: var(--bs-accordion-btn-bg);
-  transition: all 0.3s ease;
   overflow-anchor: none;
   transition: var(--bs-accordion-transition);
   font-family: 'SquareFont';
-  border: 2px solid var(--bs-accordion-border-color);
-  letter-spacing: 0.7rem; 
+  border: 2px solid var(--bs-accordion-border-color); 
   font-size:1rem;
- 
+ letter-spacing: 0.3rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .accordion-button {
@@ -4388,14 +4389,7 @@ label {
   }
 }
 
-@media (min-width: 768px){
-  .accordion-item:not(:first-child) .accordion-button {
-    letter-spacing: 0.2rem;
-}
-.accordion-item:first-child .accordion-button {
-  letter-spacing: 0.5rem;
-}
-}
+
 .accordion-button span {
   font-size: 1r.2em; 
   font-weight: bold;
@@ -4442,7 +4436,6 @@ label {
 }
 
 .accordion-item {
-
   background-color: transparent;
   border: none;
   margin-bottom: 10px;
@@ -4473,15 +4466,12 @@ label {
 }
 .accordion-collapse {
   background-color: transparent;
-  border-top: 2px solid #00FFFF; /* Questo aggiunge un bordo celeste sopra il contenuto dell'accordion */
-  
 }
 .accordion-body {
   padding: var(--bs-accordion-body-padding-y) var(--bs-accordion-body-padding-x);
-  background-color: transparent;
+  background-color: #85c06c;
   color: #f7e6ba;
   border-top: 2px solid var(--bs-accordion-border-color);
-
 }
 
 .accordion-flush .accordion-collapse {
@@ -4505,72 +4495,27 @@ label {
 #personNameList, #placeNameList, #personNameTitle, #placeNameTitle {
   font-family: "SquareFont";
   text-transform: uppercase;
-  text-align: center;
   color:black;
   background-color: #f9e8bc;
   border: 0.2rem solid #673D86;
   margin:0.5rem;
+  padding:1.5rem;
+  font-size: 1rem;
+  
 }
 
-#placeNameList > li {
-  color:#f9e8bc;
-  background-color: black;
-  border: 0.2rem  solid #673D86;
-  padding: 0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
-  margin: 0.3rem;
-}
+@media (min-width: 701px) and (max-width: 992px) {
+  #personNameList, #placeNameList, #personNameTitle, #placeNameTitle {
+    margin:0.5rem;
+    font-size: 0.7rem;  
+  }
 
-#placeNameList > li:hover {
-  color:black;
-  background-color: #f9e8bc;
-  border: 0.2rem  solid #673D86;
-  padding: 0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
-}
-
-#personNameList > li {
-  color:#f9e8bc;
-  background-color: black;
-  border: 0.2rem solid #673D86;
-  padding:0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
-  margin: 0.3rem;
-}
-
-#personNameList > li:hover {
-  color:black;
-  background-color: #f9e8bc;
-  border: 0.2rem solid #673D86;
-  padding: 0.25rem;
-  text-transform: uppercase;
-  font-family: "SquareFont";
 }
 .accordion-body ul {
   list-style-type: square;
 }
-
-@media (min-width: 480px) and (max-width: 768px) { 
-  /* Questo stile verrà applicato solo per dimensioni dello schermo tra 480px e 768px. Adatta questi valori come necessario. */
-
-  #personNameList, #placeNameList {
-      font-size: 0.8rem; /* Adatta la dimensione del font */
-      margin: 0.2rem;
-      padding: 0.2rem;
-  }
-  #personNameList > li, #placeNameList > li {
-    font-size: 0.8rem; /* Adatta la dimensione del font */
-    margin: 0.2rem;
-    padding: 0.2rem;
-}
-
-
-  .accordion-body {
-      overflow: auto; /* Permette di fare scroll se il contenuto eccede le dimensioni del contenitore */
-  }
+.accordion-body {
+  overflow: auto; /* Permette di fare scroll se il contenuto eccede le dimensioni del contenitore */
 }
 .breadcrumb {
   --bs-breadcrumb-padding-x: 0;
@@ -10951,7 +10896,9 @@ p {
   text-transform: uppercase;
   line-height: 1;
   font-family: "Roboto";
-  color: black;
+  margin-left:5rem;
+  margin-right: 5rem;
+  
 }
 
 
@@ -10974,7 +10921,6 @@ p {
   background-color:#eedfb2;
   clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
   z-index: 0; 
-  /*background-image: linear-gradient(to top right, #673D86 45%, #85C06C 45%);*/
 }
 
 .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
@@ -11001,7 +10947,6 @@ p {
 
 .section-heading .section-heading-upper:hover {
     animation: swing 1s ease infinite;
-
 }
 
 .section-heading .section-heading-lower {
@@ -11044,8 +10989,6 @@ body .section-heading .section-heading-lower {
   display: block;
   font-size: 4rem;
   font-weight: 100;
-  margin-top: 40px;
-  margin-bottom: 170px;
   font-family: "SquareFont";
   transform: rotate(10deg);
   color: #df3a1e;
@@ -11065,7 +11008,7 @@ body .section-heading .section-heading-lower {
   .intro .bg-faded {
     position: relative;
   }
-  
+
   .intro .bg-faded::before {
     content: "";
     position: absolute;
@@ -11073,15 +11016,18 @@ body .section-heading .section-heading-lower {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:#eedfb2;
+    background-color: #eedfb2;
     clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
-    z-index: 0; 
-    /*background-image: linear-gradient(to top right, #673D86 45%, #85C06C 45%);*/
+    z-index: 0;
   }
-  
+
   .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
     position: relative;
     z-index: 2;
+  }
+
+  .intro-text .section-heading-lower {
+    margin-top: -2rem;
   }
 }
 
@@ -11089,143 +11035,24 @@ body .section-heading .section-heading-lower {
   .intro .bg-faded {
     position: relative;
   }
-  
+
   .intro .bg-faded::before {
     content: "";
     position: absolute;
-    top: -10vw;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:#eedfb2;
+    background-color: #eedfb2;
     clip-path: polygon(0 5%, 0 16%, 70% 100%, 99% 11%);
-    z-index: 0; 
-    /*background-image: linear-gradient(to top right, #673D86 45%, #85C06C 45%);*/
+    z-index: 0;
   }
-  
+
   .intro .bg-faded h2, .intro .bg-faded p, .intro .bg-faded .intro-button {
     position: relative;
     z-index: 2;
   }
-  .intro-text .section-heading-lower {
-    display: block;
-    font-size: 2rem;
-    font-weight: 100;
-    margin-top: 40px;
-    margin-bottom: 170px;
-    font-family: "SquareFont";
-    transform: rotate(10deg);
-    color: #df3a1e;
-  }
-  
-  .intro-text .section-heading-upper {
-    display: block;
-    font-size: 3rem;
-    font-weight: 100;
-    font-family: "SquareFont";
-    transform: rotate(-50deg);
-    animation: placeholder-wave 1s infinite; 
-    color:#df3a1e;
-  }
 }
 
-@media (min-width: 701px) and (max-width: 992px) {
-  .baptism, .david, .judith, .sarcophagus {
-      width: 40vw;
-      height: 50vw;
-  }
-
-  .adoration {
-      width: 40vw;
-      height: 40vw;
-      margin-top: 2vw;
-  }
-
-  .last-supper {
-      width: 40vw;
-      height: 20vw;
-      margin-top: 4vw;
-  }
-
-  .madonna {
-      width: 40vw;
-      height: 40vw;
-      margin-top: 5vw;
-  }
-
-  .general {
-      width: 40vw;
-      height: 35vw;
-  }
-
-  .verrocchio {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 15vw;
-      margin-top: -13vw;
-      margin-bottom: 2vw;
-  }
-
-  .donatello {
-      width: 40vw;
-      height: 35vw;
-  }
-
-  .leonardo {
-      width: 50vw;
-      height: 45vw;
-      margin-left: 16vw;
-      margin-bottom: 5vw;
-      margin-top: -10vw;
-  }
-}
-
-@media (min-width: 992px) {
-  .baptism, .david, .sarcophagus, .judith {
-      width: 30vw;
-      height: 30vw;
-      margin-top: 4vw;
-      margin-bottom: 2.5vw;
-      margin-left: 2vw;
-  }
-
-  .adoration, .madonna {
-      width: 30vw;
-      height: 30vw;
-      margin-top: 4vw;
-      margin-left: 2vw;
-  }
-
-  .last-supper {
-      width: 30vw;
-      height: 15vw;
-      margin-top: 4vw;
-      margin-left: 8vw;
-  }
-
-  .general {
-      width: 30vw;
-      height: 25vw;
-      margin-top: 4vw;
-      margin-left: 2vw;
-  }
-
-  .verrocchio, .donatello {
-      width: 50vw;
-      max-width: 22rem;
-      height: 60vw;
-      max-height: 29rem;
-      margin-left: 20vw;
-      margin-top: -8vw;
-  }
-
-  .leonardo {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 16vw;
-      margin-bottom: 8vw;
-  }
-}
 .section-heading-lower span {
   font-family: 'Cinzel'; /* Puoi sostituire con altri font geometrici */
   letter-spacing: 5px; /* Distanza tra le lettere */
@@ -11243,20 +11070,21 @@ body .section-heading .section-heading-lower {
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%; /* Questo determina dove inizia la seconda parte del colore */
+    width: 90%; 
     height: 100%;
     background: linear-gradient(120deg, #f07a00,#f07a00 35%, #85c06c 15%, #85c06c 60%, #ffd333 40%, #ffd333 75%, #673d86 75%);
     clip-path:polygon(100% 0, 100% 71%, 53% 39%, 60% 66%, 30% 46%, 26% 69%, 11% 55%, 0% 70%, 0% 35%, 0 0);
     z-index: -1; /* Assicurati che sia dietro al testo */
 }
 
+
+
 @media (max-width: 992px) {
   .product-item .bg-faded::before {
         width: 50%;
         height: 100%;
         border:none;
-        /* puoi cambiare qualsiasi altro stile qui per adattarlo alle dimensioni dello schermo */
-    }
+  }
 }
 .product-item-description .bg-faded{
     background-color: #f7e6ba;
@@ -11506,7 +11334,14 @@ body .section-heading .section-heading-lower {
 
 .footer {
   background-color: rgba(247,230,186, 0.8);
+  font-family:"Roboto";
 }
+@media (min-width: 800px) {
+  .footer {
+    margin-top: 10rem;
+  }
+}
+
 .intro {
   position: relative;
 }
@@ -11544,8 +11379,7 @@ body .section-heading .section-heading-lower {
   }
   .product-item .product-item-description {
     position: relative;
-    z-index: 0;
-    
+    z-index: 0;   
     max-width: 50vw;
   }
 }
@@ -11579,7 +11413,6 @@ body .section-heading .section-heading-lower {
   font-size: 1.2rem;
 }
 
-
 .sticky-accordion {
     position: sticky;
     top: 200px;  
@@ -11601,30 +11434,43 @@ body .section-heading .section-heading-lower {
 }
 
 .main-content {
-  flex: 3;  /* Takes 3/4 of the container width */
+  flex: 3; 
 }
 
 .content-wrapper {
   display: flex;
-  flex-direction: row; /* direzione di default è row */
+  flex-direction: row; 
   justify-content: space-between;
 }
 
-@media (max-width: 768px) { /* Puoi regolare questo breakpoint come necessario */
+@media (min-width: 768px) { 
+  .content-wrapper {
+    display: flex;
+    flex-direction: row; 
+}
+
+.product-item-title .bg-faded{
+  margin-left:20rem;
+  width: 85%;
+}
+.main-content {
+ width: 70%; 
+}
+}
+
+@media (max-width: 768px) { 
   .content-wrapper {
       flex-direction: column;
   }
-
   .accordion {
     position: sticky;
     top: 80px;
-    z-index: 100; /* Assicurati che sia sopra gli altri contenuti */
+    z-index: 100; 
     margin-bottom: 20px;
     margin-right:10px;
   }
-
   .main-content {
-      width: 100%; /* Occupa l'intera larghezza sotto l'accordion */
+      width: 100%; 
   }
 }
 
@@ -11637,11 +11483,9 @@ body .section-heading .section-heading-lower {
 .toggle-btn, .toggle-btn-2 {
   width: 40px;
   height: 40px;
-  /*transform: translate(-50%, -50%) */
   border-radius: 50%;
-  margin-bottom: 10px;  /* Spacing between the buttons */
+  margin-bottom: 10px;  
 }
-
 
 #mainNav {
   position: sticky;
@@ -11651,7 +11495,7 @@ body .section-heading .section-heading-lower {
 
 /*titolo*/
 
-.site-heading-lower{
+.site-heading-lower {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11662,11 +11506,16 @@ body .section-heading .section-heading-lower {
   margin: 0 2px;
   display: inline-block;
   transform-origin: center;
+  position: relative;
+  text-shadow: 
+      2px 0 rgba(255,255,255,0.4),
+      4px 0 rgba(255,255,255,0.3),
+      6px 0 rgba(255,255,255,0.2);
 }
 
 .site-heading-lower span:nth-child(1) {
   font-size: 2em;
-  transform: rotate(-20deg);
+  transform: rotate(-20deg) skewY(-10deg);
 }
 
 .site-heading-lower span:nth-child(2) {
@@ -11704,60 +11553,40 @@ body .section-heading .section-heading-lower {
   transform: rotate(5deg);
 }
 
+.site-heading-lower span:hover {
+  transform: scale(1.4) rotate(10deg);
+  transition: transform 0.3s ease;
+}
+
 @media (max-width: 768px) {
   .site-heading-lower {
       font-size: 1.2em;
   }
   
   .site-heading-lower span {
-      margin: 0 1px;  /* riduzione dello spazio tra le lettere */
+      margin: 0 1px;
   }
 }
 
 @media (max-width: 576px) {
-  .site-heading-lower{
+  .site-heading-lower {
       font-size: 1em;
   }
   
   .site-heading-lower span {
-      margin: 0 0.5px;  /* ulteriore riduzione dello spazio tra le lettere */
+      margin: 0 0.5px;
   }
-}
-
-/* ombra dietro al titolo */
-
-.site-heading-lower span {
-  position:relative;
-  transform-origin: bottom left;
-  text-shadow: 
-      2px 0 rgba(255,255,255,0.4),
-      4px 0 rgba(255,255,255,0.3),
-      6px 0 rgba(255,255,255,0.2);
-  position: relative;
-}
-
-/* Adatta le trasformazioni di ogni span in base alla posizione e alla dimensione delle lettere */
-.site-heading-lower span:nth-child(1) {
-  transform: rotate(-20deg) skewY(-10deg);
-}
-
-.site-heading-lower span:hover {
-  transform: scale(1.4) rotate(10deg);
-  transition: transform 0.3s ease;
 }
 
 /* Aggiungi ulteriori regole CSS per le altre lettere, variando le trasformazioni */
 .site-heading-upper {
-   
     font-family:"Roboto";
     font-size: 3rem;
     letter-spacing: 0.1em;
     position: relative;
     text-align: center; /* Cambia da flex a text-align per centrare il testo */
     padding: 0.5em 0;
-    word-wrap: break-word; /* Per permettere al testo di andare a capo quando necessario */
-    margin-left: 10rem;
-    margin-right: 10rem;
+    word-wrap: break-word; 
   }
 
 .overlap {
@@ -11806,7 +11635,8 @@ body .section-heading .section-heading-lower {
   transform:rotate(20deg)
 }
 
-@media (max-width: 768px){
+
+@media (max-width: 1000px){
   .navbar-nav > li:nth-child(1) > .nav-link {
     font-size: 1.5rem !important;
     border-bottom: 0.2rem solid black;
@@ -11853,10 +11683,6 @@ figcaption{
   margin-top: 1rem;
 }
 
-figcaption:nth-of-type(2) {
-  
-  margin-left: 13px !important;
-}
 
 .highlight-place {
   color:#f9e8bc;
@@ -11865,8 +11691,8 @@ figcaption:nth-of-type(2) {
   padding: 0.25rem;
   text-transform: uppercase;
   font-family: "SquareFont";
-
 }
+
 .highlight-place:hover {
   color:black;
   background-color: #f9e8bc;
@@ -11875,7 +11701,6 @@ figcaption:nth-of-type(2) {
   text-transform: uppercase;
   font-family: "SquareFont";
 }
-
 
 .highlight-person {
   color:#f9e8bc;
@@ -11941,7 +11766,7 @@ figcaption:nth-of-type(2) {
 }
 
 .verrocchio {
-  background-image: url('../assets/img/verrocchiofuturista.svg');
+  background-image: url('../assets/img/verrocchiodefault.svg');
   filter: grayscale(80%);
 }
 
@@ -11951,223 +11776,269 @@ figcaption:nth-of-type(2) {
 }
 
 .leonardo {
-  background-image: url('../assets/img/Leonardofuturism.svg');
+  background-image: url('../assets/img/leonardo/leonardo.svg');
   filter: grayscale(80%);
 }
 
-/* Effetto hover */
-.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover, .david:hover, .sarcophagus:hover, .judith:hover, .general:hover, .verrocchio:hover, .donatello:hover, .leonardo:hover {
-  transform: scale(1.2);
-  z-index: 3;
-}
 
-.verrocchio:hover, .donatello:hover, .leonardo:hover {
-  z-index: 10000;
-}
 
 /* Media queries */
 @media (max-width: 576px) {
-  .baptism, .david, .judith {
-      width: 60vw;
-      height: 70vw;
+  .david, .judith {
+    width: 20rem;
+    height: 25rem;
+  }
+
+  .baptism{
+    width: 20rem;
+    height: 20rem;
   }
 
   .adoration {
-      width: 60vw;
-      height: 60vw;
-      margin-top: 5vw;
+    width: 20rem;
+    height: 25rem;
+    margin-top: 5vw;
   }
 
   .last-supper {
-      width: 60vw;
-      height: 30vw;
-      margin-top: 10vw;
-      margin-left: 15vw;
+  width: 20rem;
+  height: 10rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
   }
 
   .madonna {
-      width: 40vw;
-      height: 60vw;
-      margin-top: 10vw;
+    width: 18rem;
+    height: 20rem;
+    margin-top: 10rem;
+    margin-left: 2rem;
   }
 
   .sarcophagus {
-      width: 50vw;
-      height: 60vw;
+    width: 15rem;
+    height: 20rem;
   }
 
   .general {
-      width: 65vw;
-      height: 60vw;
+    width: 20rem;
+    height: 15rem;
   }
 
-  .verrocchio, .donatello, .leonardo {
-      width: 65vw;
-      height: 60vw;
+
+  .leonardo{
+    width: 40rem;
+    height: 25rem;
+    margin-right:50rem;
+      
+  }
+  .verrocchio{
+      width: 20rem;
+      height: 20rem;
       margin-left: 16vw;
       margin-top: -20vw;
+      margin-bottom: 1rem;
   }
+  .donatello{
+    width: 20rem;
+    height: 20rem;
+    margin-left: 16vw;
+    margin-top: -20vw;
+    margin-bottom: 1rem;
+}
 }
 
 @media (min-width: 577px) and (max-width: 700px) {
-  .baptism, .david, .judith {
-      width: 60vw;
-      height: 70vw;
+  .david {
+    width: 17rem;
+    height: 20rem;
+  }
+
+  .judith {
+    width: 10rem;
+    height: 20rem;
+  }
+  .baptism{
+    width: 20rem;
+    height: 25rem;
   }
 
   .adoration {
-      width: 40vw;
-      height: 40vw;
-      margin-top: 2vw;
+    width: 20rem;
+    height: 15rem;
+      margin-top: 2rem;
   }
 
   .last-supper {
-      width: 40vw;
-      height: 20vw;
+    width: 20rem;
+    height: 10rem;
       margin-top: 2vw;
-      margin-left: 10vw;
+      margin-left: 4rem;
   }
 
   .madonna {
-      width: 30vw;
-      height: 20vw;
+    width: 18rem;
+    height: 20rem;
       margin-top: 10vw;
   }
 
   .sarcophagus {
-      width: 50vw;
-      height: 60vw;
+    width: 15rem;
+    height: 20rem;
   }
 
   .general {
-      width: 50vw;
-      height: 45vw;
+    width: 25rem;
+    height: 15rem;
   }
 
   .verrocchio {
-      width: 10vw;
-      height: 10vw;
+      width: 20rem;
+      height: 20rem;
+      margin-bottom: 1rem;
+      margin-left: 7rem;
+      margin-top:-7rem;
   }
 
   .donatello {
-      width: 50vw;
-      height: 45vw;
+      width: 30rem;
+      height: 25rem;
+      margin-bottom: 1rem;
+      margin-left:3rem;
+      margin-top:-4rem
   }
 
   .leonardo {
-      width: 50vw;
-      height: 45vw;
-      margin-top: -15vw;
-      margin-left: 20vw;
-      margin-bottom: 5vw;
+    width: 15rem;
+    height: 30rem;  
+    margin-right: 20rem;
   }
 }
 
 @media (min-width: 701px) and (max-width: 992px) {
   .baptism, .david, .judith, .sarcophagus {
-      width: 40vw;
-      height: 50vw;
+    width: 20rem;
+    height: 25rem;
   }
 
   .adoration {
-      width: 40vw;
-      height: 40vw;
+    width: 20rem;
+    height: 25rem;
       margin-top: 2vw;
   }
 
   .last-supper {
-      width: 40vw;
-      height: 20vw;
-      margin-top: 4vw;
+    width: 23rem;
+    height: 15rem;
+      margin-top: 4rem;
+      margin-left:4rem;
   }
 
   .madonna {
-      width: 40vw;
-      height: 40vw;
+    width: 20rem;
+    height: 25rem;
       margin-top: 5vw;
   }
 
   .general {
-      width: 40vw;
-      height: 35vw;
+    width: 20rem;
+    height: 15rem;
   }
 
   .verrocchio {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 15vw;
-      margin-top: -13vw;
-      margin-bottom: 2vw;
+      width: 25rem;
+      height:25rem;
+      margin-left: 7rem;
+      margin-top: -7rem;
+      margin-bottom: 1rem;
   }
 
   .donatello {
-      width: 40vw;
-      height: 35vw;
+      width: 25rem;
+      height: 25rem;
+      margin-left:6rem;
+      margin-bottom: 1rem;
+      margin-top: -7rem;
   }
 
   .leonardo {
-      width: 50vw;
-      height: 45vw;
-      margin-left: 16vw;
-      margin-bottom: 5vw;
-      margin-top: -10vw;
+    width: 40rem;
+    height: 25rem;  
+    
   }
 }
 
 @media (min-width: 992px) {
-  .baptism, .david, .sarcophagus, .judith {
-      width: 30vw;
-      height: 30vw;
+   .judith {
+    width: 15rem;
+    height: 30rem;
       margin-top: 4vw;
-      margin-bottom: 2.5vw;
+      margin-bottom: 1.5vw;
       margin-left: 2vw;
   }
 
-  .adoration, .madonna {
-      width: 30vw;
-      height: 30vw;
+  .baptism{
+    width: 25rem;
+    height: 30rem;
+  }
+
+  .david, .sarcophagus{
+    width: 20rem;
+    height: 25rem;
+  }
+  .adoration{
+    width: 20rem;
+    height: 25rem;
       margin-top: 4vw;
       margin-left: 2vw;
+  }
+  .madonna{
+    width: 20rem;
+    height: 25rem;
+    margin-top: 4rem;
+    margin-left: 2rem;
   }
 
   .last-supper {
-      width: 30vw;
-      height: 15vw;
-      margin-top: 4vw;
-      margin-left: 8vw;
+    width: 27rem;
+    height: 13rem;
+      margin-top: 4rem;
+      margin-left: 8rem;
   }
 
   .general {
-      width: 30vw;
-      height: 25vw;
-      margin-top: 4vw;
-      margin-left: 2vw;
+    width: 30rem;
+    height: 20rem;
+      margin-top: 4rem;
+      margin-left: 2rem;
   }
 
-  .verrocchio, .donatello {
-      width: 50vw;
-      max-width: 22rem;
-      height: 60vw;
-      max-height: 29rem;
-      margin-left: 20vw;
-      margin-top: -8vw;
+  .verrocchio {
+      width: 25rem;
+      height: 25rem;
+      margin-left: 13rem;
+      margin-top: -6rem;
+      margin-bottom: 1rem;
   }
 
+  .donatello {
+    width: 25rem;
+    height: 25rem;
+    margin-left: 15rem;
+    margin-top: -6rem;
+    margin-bottom: 1rem;
+}
   .leonardo {
-      width: 40vw;
-      height: 35vw;
-      margin-left: 16vw;
-      margin-bottom: 8vw;
+      width: 45rem;
+      height: 25rem;  
+      margin-top: -2rem;;  
   }
 }
 .vasaripaint {
   margin-right: 2.5rem;  
   background-repeat: no-repeat;
   background-size: contain;
-  width: 70vw;
-  max-width: 47rem; 
-  height: 80vw;
-  max-height: 54rem; 
+  width: 40rem;  
+  height: 48rem; 
   transform: rotate(10deg);
   background-image: url('../assets/img/vasaripaintfuturism.svg');
 }
@@ -12176,29 +12047,32 @@ figcaption:nth-of-type(2) {
   transform: scale(1.1);
   z-index: 10000; 
 }
+
 @media (max-width: 576px) {
   .intro .vasaripaint {
     width: 75%;
-    margin-left: 5rem;
+    height: 20rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
-    margin-top:-5rem;
-    width: 100%;
+    width: 95%;
+    margin-top: -3rem;
   }
   .intro .intro-text .intro-button {
     width: 80%; 
     position: absolute;
- 
   }
 }
 
 @media (min-width: 577px) and (max-width: 700px) {
   .intro .vasaripaint {
-    width: 75%;
+    width: 85%;
+    height: 25rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
-    margin-top:-23rem;
-    width: 100%;
+    width: 95%;
+    margin-top: -7rem;
   }
   .intro .intro-text .intro-button {
     width: 100%; 
@@ -12207,12 +12081,14 @@ figcaption:nth-of-type(2) {
 }
 
 @media (min-width: 701px) and (max-width: 991px) {
- .intro .vasaripaint {
+  .intro .vasaripaint {
     width: 75%;
+    height: 30rem;
+    margin-left: 4rem;
   }
   .intro .intro-text {
-    margin-top:-20rem;
-    width: 100%;
+    width: 95%;
+    margin-top: -10rem;
   }
   .intro .intro-text .intro-button {
     width: 100%; 
@@ -12222,21 +12098,20 @@ figcaption:nth-of-type(2) {
 
 @media (min-width: 992px) and (max-width:1199px){
   .intro .vasaripaint {
-    width: 50%;
+    width: 70%;
     float: right;
+    margin-top: 5rem;
   }
   .intro .intro-text {
     left: 0;
-    margin-top: 5rem;
     width: 65%;
+    margin-top: 5rem;
     position: absolute;
   }
   .intro .intro-text .intro-button {
     width: 100%;
     left: 0;
     position: absolute;
-  
-    
   }
 }
 
@@ -12255,7 +12130,6 @@ figcaption:nth-of-type(2) {
     width: 100%;
     left: 0;
     position: absolute;
-    
   }
 }
 
@@ -12263,23 +12137,28 @@ figcaption:nth-of-type(2) {
 .btns-grid-container {
   display: grid;
   position: fixed;
-  right: 0.6rem;  /* 10px convertito in rem */
-  bottom: 0.6rem;  /* 10px convertito in rem */
-  grid-template-rows: repeat(8, auto);  /* 8 rows for 8 grid items */
-  gap: 0.3125rem;  /* 5px convertito in rem */
-  z-index: 9999;  /* This will ensure it's on top of most other elements */
+  right: 0.6rem;  
+  bottom: 0.6rem;  
+  grid-template-rows: repeat(8, auto);  
+  gap: 0.3125rem;  
+  z-index: 9999;  
 }
 
 .sub-btn, #stylesBtn, #toTopBtn {
-  width: 3.75rem;  /* 60px convertito in rem */
-  height: 3.75rem;  /* 60px convertito in rem */
-  border: 0.4375rem solid #8bc276;  /* 7px convertito in rem */
+  width: 3.75rem;  
+  height: 3.75rem; 
+  border: 0.2rem solid #8bc276;  
   background-color: rgba(247,230,186);  
   color: #fff;
   cursor: pointer;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sub-btn:hover, #stylesBtn:hover, #toTopBtn:hover {
-  background-color: #e77f3d;  /* Adjust hover color as required */
+  border: 0.2rem solid rgba(247,230,186);  
+  background-color: #8bc276 ;   
 }
 
 .sub-btn[data-theme] {
@@ -12287,12 +12166,11 @@ figcaption:nth-of-type(2) {
 }
 
 #stylesBtn {
-  background-image: url('../assets/img/paint.png');
+  background-image: url('../assets/img/paintoro.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-
 .sub-btn[data-theme="theme1"] {
   background-image: url('../assets/img/vitruvian-man.png');
   background-size: cover;
@@ -12332,30 +12210,27 @@ figcaption:nth-of-type(2) {
   background-repeat: no-repeat;
 }
 
-
-
-
 #toTopBtn .btn-icon {
-  color: #673d86; /* Questo è un esempio di colore viola. Puoi sostituirlo con il codice esatto del colore viola che desideri. */
+  color: #673d86; 
 }
 
 .sub-btn {
-  position: relative;  /* Questo permette di posizionare il testo in modo assoluto rispetto al pulsante */
+  position: relative; 
 }
 
 .btn-hover-text {
   display: none;  
   position: absolute;
   top: 0;  
-  left: 10%;
+  left: 50%;
   transform: translateX(-100%); 
   font-size: 1.1rem; 
   background-color: rgba(247,230,186);
   font-family: "SquareFont"; 
   color: #da7634; 
   font-weight: bold;
-  padding: 0.1rem 0.3rem;  
-  
+  padding: 0.1rem 0.6rem; 
+  margin: 2px;
 }
 
 .sub-btn:hover .btn-hover-text {
@@ -12374,9 +12249,10 @@ figcaption:nth-of-type(2) {
   display: inline;
 }
 
+
 /*prova effetto parole*/
 .floating-word {
-  color:white;
+  color: white;
   font-family: "SquareFont";
   position: fixed;
   opacity: 0;
@@ -12387,130 +12263,46 @@ figcaption:nth-of-type(2) {
   margin: 0;
   border: none;
   padding: 0;
+  pointer-events: none;
 }
 
-@media (max-width: 576px) {
-  .word1 {
-    right: 90%;
-    top: 30%;
-    font-size: 2em;
-    animation-name: fadeInOut1;
-    color:#fed231;
-    transform:rotate(20deg);
-  }
-  
-  .word2 {
-    left: 70%;
-    top: 45%;
-    font-size: 1em;
-    animation-name: fadeInOut2;
-  }
-  
-  .word3 {
-    left: 30%;
-    top: 70%;
-    font-size: 3em;
-    animation-name: fadeInOut3;
-    color:#673d86;
-  }
-  
-  .word4 {
-    left: 60%;
-    top: 10%;
-    font-size: 3em;
-    animation: curveFadeInOut 4s infinite;
-  }
-  
-  .word5 {
-    right: 60%;
-    top: 40%;
-    font-size: 1em;
-    color:#7cb76c;
-    animation: curveFadeInOut2 4s infinite;
-  }
+.word1, .word6, .word7 {
+  font-size: 2em;
+  color: #fed231;
+  transform: rotate(20deg);
+  animation-name: fadeInOut1;
 }
 
-@media (min-width: 701px) and (max-width: 992px) {
-  .word1 {
-    right: 90%;
-    top: 30%;
-    font-size: 2em;
-    animation-name: fadeInOut1;
-    color:#fed231;
-    transform:rotate(20deg);
-  }
-  
-  .word2 {
-    left: 70%;
-    top: 45%;
-    font-size: 1em;
-    animation-name: fadeInOut2;
-  }
-  
-  .word3 {
-    left: 30%;
-    top: 70%;
-    font-size: 3em;
-    animation-name: fadeInOut3;
-    color:#673d86;
-  }
-  
-  .word4 {
-    left: 60%;
-    top: 10%;
-    font-size: 3em;
-    animation: curveFadeInOut 4s infinite;
-  }
-  
-  .word5 {
-    right: 60%;
-    top: 40%;
-    font-size: 1em;
-    color:#7cb76c;
-    animation: curveFadeInOut2 4s infinite;
-  }
-}
-@media (min-width: 992px){
-  .word1 {
-    right: 90%;
-    top: 30%;
-    font-size: 2em;
-    animation-name: fadeInOut1;
-    color:#fed231;
-    transform:rotate(20deg);
-  }
-  
-  .word2 {
-    left: 70%;
-    top: 45%;
-    font-size: 1em;
-    animation-name: fadeInOut2;
-  }
-  
-  .word3 {
-    left: 30%;
-    top: 70%;
-    font-size: 3em;
-    animation-name: fadeInOut3;
-    color:#673d86;
-  }
-  
-  .word4 {
-    left: 60%;
-    top: 10%;
-    font-size: 3em;
-    animation: curveFadeInOut 4s infinite;
-  }
-  
-  .word5 {
-    right: 60%;
-    top: 40%;
-    font-size: 1em;
-    color:#7cb76c;
-    animation: curveFadeInOut2 4s infinite;
-  }
+.word2 {
+  font-size: 1em;
+  animation-name: fadeInOut2;
 }
 
+.word3 {
+  font-size: 3em;
+  animation-name: fadeInOut3;
+  color: #673d86;
+}
+
+.word4 {
+  font-size: 3em;
+  animation: curveFadeInOut 4s infinite;
+}
+
+.word5 {
+  font-size: 1em;
+  color: #7cb76c;
+  animation: curveFadeInOut2 4s infinite;
+}
+
+.word6 {
+  font-size: 1.5em;
+  animation: curveFadeInOut2 4s infinite;
+}
+
+.word7 {
+  animation: curveFadeInOut 4s infinite;
+}
 @keyframes fadeInOut1 {
   0% { opacity: 0; }
   25% { opacity: 1; }
@@ -12585,27 +12377,77 @@ background-image: url('/assets/img/cursorefuturismo.svg');
 }
 
 .leaflet-popup-content-wrapper {
-  background-color: black; 
-  color: #ffffff; 
-  border: 2px solid #00ff00; 
   border-radius: 0;
   font-family: "Roboto";
   text-transform: uppercase;
   text-align: center;
+  border: 4px solid #7cb76c;
+  color: white;
+  letter-spacing: 0.2rem;
+  background-color: #673d86;
 }
 
 .leaflet-popup-tip {
-  background-color: #1a1a1a;
+  background-color: #7cb76c;
+}
+.leaflet-popup-tip:hover {
+  background-color: #673d86;
 }
 
 .leaflet-popup-content-wrapper:hover {
-  background-color: white;
-  color: black;            
+  background-color: #7cb76c;
+  color: black;          
+  border: 4px solid #673d86;  
+}
+
+.leaflet-popup-content-wrapper:hover a {
+  color: #673d86;          
+}
+#centerToMarkers{
+  margin: 2rem;
+  font-family: "Roboto";
+  color: white;
+  border: 4px solid #7cb76c;
+  background-color: #673d86;
+  text-transform: uppercase;
+  padding:0.5rem;
+    }
+
+#centerToMarkers:hover{
+  position: sticky;
+  font-family: "Roboto";
+  color: white;
+  border: 4px solid #7cb76c;
+  background-color: #673d86;
+  text-transform: uppercase;
+  
+  }
+
+  .leaflet-control-zoom a {
+    font-family: "Roboto";
+    color: white;
+    border: 2px solid #7cb76c;
+    background-color: #673d86;    
+}
+
+.leaflet-control-search .search-icon:before {
+  font-family: "Roboto";
+  color: white;
+  border: 2px solid #7cb76c;
+  background-color: #673d86;    
+}
+
+.leaflet-popup-content a {
+  color: #7cb76c; 
+}
+
+.leaflet-popup-content a:hover {
+  color: #673d86; 
 }
 
 /* Stile per gli elementi evidenziati */
 .highlight {
-  background-color: yellow !important;
+  background-color: #673d86 !important;
   font-weight: bold !important;
 }
 
@@ -12653,9 +12495,6 @@ background-image: url('/assets/img/cursorefuturismo.svg');
     margin-right: 2rem;
   }
 }
-
-
-
 
 @keyframes shake {
   0% { transform: translate(1px, 1px) rotate(0deg); }
