@@ -11121,6 +11121,7 @@ p {
 
 
 /* CSS per schermi di dimensioni standard */
+/*
 .baptism, .adoration, .last-supper, .madonna {
   background-repeat: no-repeat;
   background-size: contain;
@@ -11160,7 +11161,265 @@ p {
   border-right: 1.6vw solid black;
   background-image: url('../assets/img/madonna.svg');
 }
+*/
+/* CSS per schermi di dimensioni standard */
+.baptism, .adoration, .last-supper, .madonna, .david, .sarcophagus, .judith, .general, .verrocchio, .donatello, .leonardo {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
+.baptism {
+  background-image: url('../assets/img/baptismfuturism.svg');
+}
+
+.adoration {
+  background-image: url('../assets/img/adorationfuturism.svg');
+}
+
+.last-supper {
+  background-image: url('../assets/img/last-supperfuturismo.svg');
+}
+
+.madonna {
+  background-image: url('../assets/img/madonnadefault.svg');
+}
+
+.david {
+  background-image: url('../assets/img/davidefault.svg');
+}
+
+.sarcophagus {
+  background-image: url('../assets/img/sarcophagudefault.svg');
+}
+
+.judith {
+  background-image: url('../assets/img/judithdefault.svg');
+}
+
+.general {
+  background-image: url('../assets/img/generaldefault.svg');
+}
+
+.verrocchio {
+  background-image: url('../assets/img/verrocchiofuturista.svg');
+  filter: grayscale(80%);
+}
+
+.donatello {
+  background-image: url('../assets/img/Donatellofuturism.svg');
+  filter: grayscale(80%);
+}
+
+.leonardo {
+  background-image: url('../assets/img/Leonardofuturism.svg');
+  filter: grayscale(80%);
+}
+
+/* Effetto hover */
+.baptism:hover, .adoration:hover, .last-supper:hover, .madonna:hover, .david:hover, .sarcophagus:hover, .judith:hover, .general:hover, .verrocchio:hover, .donatello:hover, .leonardo:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+.verrocchio:hover, .donatello:hover, .leonardo:hover {
+  z-index: 10000;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+  .baptism, .david, .judith {
+    width: 60vw;
+    height: 70vw;
+  }
+
+  .adoration {
+    width: 60vw;
+    height: 60vw;
+    margin-top: 5vw;
+  }
+
+  .last-supper {
+    width: 60vw;
+    height: 30vw;
+    margin-top: 10vw;
+    margin-left: 15vw;
+  }
+
+  .madonna {
+    width: 40vw;
+    height: 60vw;
+    margin-top: 10vw;
+  }
+
+  .sarcophagus {
+    width: 50vw;
+    height: 60vw;
+  }
+
+  .general {
+    width: 65vw;
+    height: 60vw;
+  }
+
+  .verrocchio, .donatello, .leonardo {
+    width: 65vw;
+    height: 60vw;
+    margin-left: 16vw;
+    margin-top: -20vw;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 700px) {
+  .baptism, .david, .judith {
+    width: 60vw;
+    height: 70vw;
+  }
+
+  .adoration {
+    width: 40vw;
+    height: 40vw;
+    margin-top: 2vw;
+  }
+
+  .last-supper {
+    width: 40vw;
+    height: 20vw;
+    margin-top: 2vw;
+    margin-left: 10vw;
+  }
+
+  .madonna {
+    width: 30vw;
+    height: 20vw;
+    margin-top: 10vw;
+  }
+
+  .sarcophagus {
+    width: 50vw;
+    height: 60vw;
+  }
+
+  .general {
+    width: 50vw;
+    height: 45vw;
+  }
+
+  .verrocchio {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .donatello {
+    width: 50vw;
+    height: 45vw;
+  }
+
+  .leonardo {
+    width: 50vw;
+    height: 45vw;
+    margin-top: -15vw;
+    margin-left: 20vw;
+    margin-bottom: 5vw;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 992px) {
+  .baptism, .david, .judith, .sarcophagus {
+    width: 40vw;
+    height: 50vw;
+  }
+
+  .adoration {
+    width: 40vw;
+    height: 40vw;
+    margin-top: 2vw;
+  }
+
+  .last-supper {
+    width: 40vw;
+    height: 20vw;
+    margin-top: 4vw;
+  }
+
+  .madonna {
+    width: 40vw;
+    height: 40vw;
+    margin-top: 5vw;
+  }
+
+  .general {
+    width: 40vw;
+    height: 35vw;
+  }
+
+  .verrocchio {
+    width: 40vw;
+    height: 35vw;
+    margin-left: 15vw;
+    margin-top: -13vw;
+    margin-bottom: 2vw;
+  }
+
+  .donatello {
+    width: 40vw;
+    height: 35vw;
+  }
+
+  .leonardo {
+    width: 50vw;
+    height: 45vw;
+    margin-left: 16vw;
+    margin-bottom: 5vw;
+    margin-top: -10vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .baptism, .david, .sarcophagus, .judith {
+    width: 30vw;
+    height: 30vw;
+    margin-top: 4vw;
+    margin-bottom: 2.5vw;
+    margin-left: 2vw;
+  }
+
+  .adoration, .madonna {
+    width: 30vw;
+    height: 30vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+  }
+
+  .last-supper {
+    width: 30vw;
+    height: 15vw;
+    margin-top: 4vw;
+    margin-left: 8vw;
+  }
+
+  .general {
+    width: 30vw;
+    height: 25vw;
+    margin-top: 4vw;
+    margin-left: 2vw;
+  }
+
+  .verrocchio, .donatello {
+    width: 50vw;
+    max-width: 22rem;
+    height: 60vw;
+    max-height: 29rem;
+    margin-left: 20vw;
+    margin-top: 0vw;
+  }
+
+  .leonardo {
+    width: 40vw;
+    height: 35vw;
+    margin-left: 16vw;
+    margin-bottom: 8vw;
+  }
+}
 
 
 .btns-grid-container {
