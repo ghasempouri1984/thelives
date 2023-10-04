@@ -63,9 +63,8 @@ $(document).ready(function() {
           $("#personNameTitle").hide();
       }
   });
-
-    // Load saved stylesheet
-    loadSavedStylesheet();
+// Load saved stylesheet
+    // loadSavedStylesheet();
 
 });
 
