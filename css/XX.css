@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Futura&display=swap');
+
 /*!
 * Start Bootstrap - Business Casual v7.0.9 (https://startbootstrap.com/theme/business-casual)
 * Copyright 2013-2023 Start Bootstrap
@@ -54,10 +56,10 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif: 'Futura', 'Helvetica', sans-serif !important;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Lora, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --bs-body-font-family: 'Futura', 'Helvetica', sans-serif !important;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -117,7 +119,7 @@ hr {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -5548,7 +5550,7 @@ textarea.form-control-lg {
   display: block;
   padding: var(--bs-tooltip-arrow-height);
   margin: var(--bs-tooltip-margin);
-  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5658,7 +5660,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: "Lora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10853,17 +10855,19 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
 }
 .site-heading .site-heading-upper {
   display: block;
   font-size: 2rem;
   font-weight: 800;
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
 }
 
 .page-section {
@@ -10901,7 +10905,7 @@ p {
 
 #mainNav {
   background-color: rgba(47, 23, 15, 0.9);
-  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
 }
 #mainNav .navbar-brand {
   color: #e6a756;
@@ -11616,13 +11620,14 @@ header {
 }
 
 .section-heading {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Futura', 'Helvetica', sans-serif !important;
   font-size: 2em;
   font-weight: bold;
-  letter-spacing: 2px;
-  color: #333; /* Dark color for the main heading */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Drop shadow for depth */
+  letter-spacing: 12px;
+  color: #333;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
 
 .section-heading-upper {
   display: inline-block;
