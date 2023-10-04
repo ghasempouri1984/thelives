@@ -106,6 +106,18 @@
   font-family: 'FuturaBook';
   src: url('/assets/fonts/futura-book-font.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'PaperCut';
+  src: url('/assets/fonts/papercut.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Arcade';
+  src: url('/assets/fonts/ARCADECLASSIC.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'BACK1982';
+  src: url('/assets/fonts/BACKTO1982.TTF') format('truetype');
+}
 
 body {
   margin: 0;
@@ -10867,19 +10879,19 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Silkscreen-Bold" !important;
+  font-family: "Arcade" !important;
 }
 .site-heading .site-heading-upper {
   display: block;
   font-size: 2rem;
   font-weight: 800;
-  font-family: "Silkscreen-Bold" !important;
+  font-family: "Arcade" !important;
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
-  font-family: "Silkscreen-Regular" !important;
+  font-family: "Arcade" !important;
 }
 
 .page-section {
