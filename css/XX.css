@@ -59,7 +59,7 @@
   --bs-font-sans-serif: sans-serif !important;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: 'Silkscreen-Regular' !important;
+  --bs-body-font-family: 'FuturaBook' !important;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -102,10 +102,9 @@
   font-family: 'Silkscreen-Regular';
   src: url('/assets/fonts/Silkscreen-Regular.ttf') format('truetype');
 }
-
 @font-face {
-  font-family: 'Bauhaus';
-  src: url('/assets/fonts/Bauhaus_.ttf') format('truetype');
+  font-family: 'FuturaBook';
+  src: url('/assets/fonts/futura-book-font.ttf') format('truetype');
 }
 
 body {
@@ -10868,13 +10867,13 @@ p {
   margin-bottom: 5rem;
   text-transform: uppercase;
   line-height: 1;
-  font-family: "Silkscreen-Regular" !important;
+  font-family: "Silkscreen-Bold" !important;
 }
 .site-heading .site-heading-upper {
   display: block;
   font-size: 2rem;
   font-weight: 800;
-  font-family: "Silkscreen-Regular" !important;
+  font-family: "Silkscreen-Bold" !important;
 }
 .site-heading .site-heading-lower {
   font-size: 5rem;
