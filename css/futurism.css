@@ -4496,21 +4496,25 @@ color:black;
   font-family: "SquareFont";
   text-transform: uppercase;
   color:black;
-  background-color: #f9e8bc;
-  border: 0.2rem solid #673D86;
-  margin:0.5rem;
-  padding:1.5rem;
   font-size: 1rem;
-  
 }
 
-@media (min-width: 701px) and (max-width: 992px) {
-  #personNameList, #placeNameList, #personNameTitle, #placeNameTitle {
-    margin:0.5rem;
-    font-size: 0.7rem;  
-  }
 
+#personNameList a, #placeNameList a, #personNameTitle a, #placeNameTitle a{
+  font-family: "SquareFont";
+  text-transform: uppercase;
+  color:black;
+  font-size: 1rem;
 }
+
+#personNameList a:hover, #placeNameList a:hover, #personNameTitle a:hover, #placeNameTitle a:hover{
+  font-family: "SquareFont";
+  text-transform: uppercase;
+  color: #f7e6ba;
+  font-size: 1rem;
+}
+
+
 .accordion-body ul {
   list-style-type: square;
 }
