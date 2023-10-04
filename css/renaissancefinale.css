@@ -11708,11 +11708,11 @@ p {
 }
 
 .david {
-  background-image: url('../assets/img/davidrinascimento2.svg');
+  background-image: url('../assets/img/Renaissance/davidrinascimento2.svg');
 }
 
 .sarcophagus {
-  background-image: url('../assets/img/sarcofagorinascimento2.svg');
+  background-image: url('../assets/img/Renaissance/sarcofagorinascimento2.svg');
 }
 
 @media (max-width: 576px) {
@@ -11778,10 +11778,10 @@ p {
   filter: saturate(150%);
 }
 
-.baptism { background-image: url('../assets/img/baptismrenaissance2.svg'); }
-.adoration { background-image: url('../assets/img/adortionrenaissance2.svg'); }
-.last-supper { background-image: url('../assets/img/last-supperrenaissance2.svg'); }
-.madonna { background-image: url('../assets/img/madonnarenaissace2.svg'); }
+.baptism { background-image: url('../assets/img/Renaissance/baptismrenaissance2.svg'); }
+.adoration { background-image: url('../assets/img/Renaissance/adortionrenaissance2.svg'); }
+.last-supper { background-image: url('../assets/img/Renaissance/last-supperrenaissance2.svg'); }
+.madonna { background-image: url('../assets/img/Renaissance/madonnarenaissace2.svg'); }
 
 @media (max-width: 576px) {
   .baptism {
@@ -11903,14 +11903,14 @@ p {
   filter: saturate(150%);
 }
 
-.judith { background-image: url('../assets/img/judithrinascimento2.svg'); }
-.general { background-image: url('../assets/img/generaldefault2.svg'); }
+.judith { background-image: url('../assets/img/Renaissance/judithrinascimento2.svg'); }
+.general { background-image: url('../assets/img/Renaissance/generaldefault2.svg'); }
 
 @media (max-width: 576px) {
  
   .judith {
       width: 10rem;
-      height: 20rem;
+      height: 17rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
   }
@@ -11919,7 +11919,7 @@ p {
  
   .judith {
       width: 10rem;
-      height: 20rem;
+      height: 17rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
   }
@@ -11929,7 +11929,7 @@ p {
  
   .judith {
       width: 10rem;
-      height: 20rem;
+      height: 16rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
   }
@@ -11938,7 +11938,7 @@ p {
 @media (min-width: 992px) {
   .judith {
       width: 15rem;
-      height: 30rem;
+      height: 25rem;
       margin-top: 2rem;
       margin-bottom: 1rem;
   }
@@ -11998,8 +11998,7 @@ p {
     height:20rem;
     margin-left: 4rem;
   }
-  .intro .intro-text {
-    
+  .intro .intro-text {  
     width: 100%;
   }
   .intro .intro-text .intro-button {
@@ -12016,7 +12015,6 @@ p {
     margin-left: 5rem;
   }
   .intro .intro-text {
-    
     width: 100%;
   }
   .intro .intro-text .intro-button {
@@ -12033,7 +12031,6 @@ p {
     height: 25rem;
   }
   .intro .intro-text {
-   
     width: 100%;
     margin-top:-3rem;
   }
@@ -12060,8 +12057,6 @@ p {
     width: 100%;
     left: 0;
     position: absolute;
-  
-    
   }
 }
 
@@ -12080,7 +12075,6 @@ p {
     width: 100%;
     left: 0;
     position: absolute;
-    
   }
 }
 
@@ -12183,6 +12177,7 @@ filter: sepia(0.6);
     text-align: center;
   }
   
+  
   .leaflet-popup-tip {
     background-color:  #dfd9c8;
     border: 2px solid var(--bs-gold);
@@ -12224,3 +12219,4 @@ filter: sepia(0.6);
   width: 80%;
   box-sizing: border-box;
 }
+

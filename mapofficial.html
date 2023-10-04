@@ -13,7 +13,7 @@
     <header>
         <h1 class="site-heading text-center text-faded d-none d-lg-block">
             <span class="site-heading-lower">The Lives</span>
-            <span class="site-heading-upper text-primary mb-3" >of the Most Excellent Painters, Sculptors, and Architects</span>
+            <span class="site-heading-upper text-primary mb-3">of the Most Excellent Painters, Sculptors, and Architects</span>
         </h1>
     </header>
     <!-- Navigation-->
@@ -142,19 +142,19 @@
 
         // Add click event to the "Center to Markers" button
         document.getElementById("centerToMarkers").addEventListener("click", centerToMarkers);
-// data values define in italy prov geojson
-var data = italy_prov;
-var featuresLayer = new L.GeoJSON(data, {
-    style: function(feature) {
-        return {
+        // data values define in italy prov geojson
+        var data = italy_prov;
+        var featuresLayer = new L.GeoJSON(data, {
+            style: function(feature) {
+            return {
             color: 'transparent', // set border color to transparent
             fillColor: 'transparent' // set fill color to transparent
         };
-    },
-    onEachFeature: function(feature, marker) {
-        marker.bindPopup('<h4 style="color:' + feature.properties.color + '">' + feature.properties.prov_name + '</h4>');
-    }
-});
+        },
+            onEachFeature: function(feature, marker) {
+            marker.bindPopup('<h4 style="color:' + feature.properties.color + '">' + feature.properties.prov_name + '</h4>');
+        }
+        });
 
         map.addLayer(featuresLayer);
 
