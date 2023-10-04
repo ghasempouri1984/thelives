@@ -11008,7 +11008,7 @@ p {
   .product-item .product-item-description {
     position: relative;
     z-index: 0;
-    margin-top: 3rem;
+    margin-top: 0;
     max-width: 50vw;
   }
 }
@@ -11407,10 +11407,10 @@ p {
   .verrocchio, .donatello {
     width: 50vw;
     max-width: 22rem;
-    height: 60vw;
+    height: 15vw;
     max-height: 29rem;
-    margin-left: 20vw;
-    margin-top: 0vw;
+    margin-left: 25vw;
+    margin-top: 2vw;
   }
 
   .leonardo {
