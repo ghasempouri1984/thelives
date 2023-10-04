@@ -11132,7 +11132,11 @@ body .section-heading .section-heading-lower {
 
 
 @media (max-width: 576px) {
- 
+  .product-item-description .bg-faded p:nth-of-type(3) {
+    margin-left:2rem;
+    margin-right: 2rem;
+}
+
 }
 @media (min-width: 577px) and (max-width: 700px) {
   .product-item-description .bg-faded p:nth-of-type(1), .product-item-description .bg-faded p:nth-of-type(4), .product-item-description .bg-faded p:nth-of-type(8),.product-item-description .bg-faded p:nth-of-type(11),.product-item-description .bg-faded p:nth-of-type(18) {
@@ -11776,16 +11780,14 @@ figcaption{
 }
 
 .leonardo {
-  background-image: url('../assets/img/leonardo/leonardo.svg');
+  background-image: url('../assets/img/leonardo.svg');
   filter: grayscale(80%);
 }
-
-
 
 /* Media queries */
 @media (max-width: 576px) {
   .david, .judith {
-    width: 20rem;
+    width: 17rem;
     height: 25rem;
   }
 
@@ -11796,8 +11798,8 @@ figcaption{
 
   .adoration {
     width: 20rem;
-    height: 25rem;
-    margin-top: 5vw;
+    height: 20rem;
+    margin-top: 2rem;
   }
 
   .last-supper {
@@ -11820,29 +11822,29 @@ figcaption{
   }
 
   .general {
-    width: 20rem;
-    height: 15rem;
+    width: 18rem;
+    height: 13rem;
   }
 
 
   .leonardo{
-    width: 40rem;
-    height: 25rem;
-    margin-right:50rem;
+    width: 28rem;
+    height: 20rem;
+    margin-top: -7rem;
       
   }
   .verrocchio{
       width: 20rem;
       height: 20rem;
-      margin-left: 16vw;
-      margin-top: -20vw;
+      margin-left: 5rem;
+      margin-top: -7rem;
       margin-bottom: 1rem;
   }
   .donatello{
     width: 20rem;
     height: 20rem;
-    margin-left: 16vw;
-    margin-top: -20vw;
+    margin-left:5rem;
+    margin-top: -5rem;
     margin-bottom: 1rem;
 }
 }
@@ -11871,7 +11873,7 @@ figcaption{
   .last-supper {
     width: 20rem;
     height: 10rem;
-      margin-top: 2vw;
+      margin-top: 1rem;
       margin-left: 4rem;
   }
 
@@ -11908,9 +11910,10 @@ figcaption{
   }
 
   .leonardo {
-    width: 15rem;
-    height: 30rem;  
+    width: 30rem;
+    height: 20rem;  
     margin-right: 20rem;
+    margin-top: -7rem;
   }
 }
 
@@ -11922,12 +11925,12 @@ figcaption{
 
   .adoration {
     width: 20rem;
-    height: 25rem;
+    height: 20rem;
       margin-top: 2vw;
   }
 
   .last-supper {
-    width: 23rem;
+    width: 22rem;
     height: 15rem;
       margin-top: 4rem;
       margin-left:4rem;
@@ -11935,7 +11938,7 @@ figcaption{
 
   .madonna {
     width: 20rem;
-    height: 25rem;
+    height: 20rem;
       margin-top: 5vw;
   }
 
@@ -11961,8 +11964,9 @@ figcaption{
   }
 
   .leonardo {
-    width: 40rem;
+    width: 33rem;
     height: 25rem;  
+    
     
   }
 }
@@ -11977,8 +11981,8 @@ figcaption{
   }
 
   .baptism{
-    width: 25rem;
-    height: 30rem;
+    width: 20rem;
+    height: 25rem;
   }
 
   .david, .sarcophagus{
@@ -11987,26 +11991,26 @@ figcaption{
   }
   .adoration{
     width: 20rem;
-    height: 25rem;
+    height: 20rem;
       margin-top: 4vw;
       margin-left: 2vw;
   }
   .madonna{
     width: 20rem;
-    height: 25rem;
+    height: 20rem;
     margin-top: 4rem;
     margin-left: 2rem;
   }
 
   .last-supper {
-    width: 27rem;
+    width: 22rem;
     height: 13rem;
       margin-top: 4rem;
       margin-left: 8rem;
   }
 
   .general {
-    width: 30rem;
+    width: 23rem;
     height: 20rem;
       margin-top: 4rem;
       margin-left: 2rem;
@@ -12028,9 +12032,10 @@ figcaption{
     margin-bottom: 1rem;
 }
   .leonardo {
-      width: 45rem;
-      height: 25rem;  
-      margin-top: -2rem;;  
+      width:35rem;
+      height:22rem;  
+      margin-top:-7rem;
+      
   }
 }
 .vasaripaint {
