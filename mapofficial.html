@@ -151,9 +151,9 @@
             fillColor: 'transparent' // set fill color to transparent
         };
         },
-            onEachFeature: function(feature, marker) {
-            marker.bindPopup('<h4 style="color:' + feature.properties.color + '">' + feature.properties.prov_name + '</h4>');
-        }
+            //onEachFeature: function(feature, marker) {
+            //marker.bindPopup('<h4 style="color:' + feature.properties.color + '">' + feature.properties.prov_name + '</h4>');
+        //}
         });
 
         map.addLayer(featuresLayer);
