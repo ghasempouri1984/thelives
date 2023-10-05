@@ -11657,7 +11657,7 @@ margin-top: 0.8rem;
   .bg-faded p {
       margin-right: 2rem;
       margin-left: 1rem;
-     
+      margin-top: 2.5rem;
   }
 }
 
@@ -11666,6 +11666,7 @@ margin-top: 0.8rem;
   .bg-faded p {
       margin-right: 0.5rem;
       margin-left: 0.7rem;
+      margin-top: 2.5rem;
   }
 }
 @media (min-width: 701px) and (max-width: 992px) {
@@ -11677,7 +11678,7 @@ margin-top: 0.8rem;
 }
 @media (min-width: 993px) {
   .bg-faded p {
-    margin-left: 2rem; 
+    margin-left: 2.2rem; 
     margin-top: 2.5rem;
   }
 }
