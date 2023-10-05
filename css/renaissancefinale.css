@@ -11174,7 +11174,6 @@ top: 100%;
 
 .bg-faded {
   background-color: #dfd9c8;
-  width: 100%;
 }
 
 .btn-xl {
@@ -11274,7 +11273,6 @@ box-shadow:
     position: relative;
     z-index: 2;
     margin-bottom: -1rem;
-    
   }
   .product-item .product-item-description {
     position: relative;
@@ -11318,6 +11316,7 @@ box-shadow:
     position: relative;
     z-index: 2;
     margin-bottom: -1rem;
+    
     
   }
   .product-item .product-item-description {
@@ -11626,7 +11625,7 @@ margin-top: 1rem;
     width: 18rem;
 margin-bottom:1rem;
 margin-left:-0.9rem;
-margin-top: 1.5srem;
+margin-top: 1.5rem;
   }
 }
 
@@ -11649,7 +11648,6 @@ margin-top: 0.8rem;
 
 
 .bg-faded p {
-
   margin-left: 2rem; 
 }
 
@@ -11660,7 +11658,6 @@ margin-top: 0.8rem;
       margin-top: 2.5rem;
   }
 }
-
 
 @media (min-width: 577px) and (max-width: 700px) {
   .bg-faded p {
